@@ -9,7 +9,7 @@ class CategoriesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView(
         children: CategoryList.map((e) {
-          return CategoryItem(clTitle: e.clTitle, clColor: e.clColor);
+          return CategoryItem(clId:e.clId ,  clTitle: e.clTitle, clColor: e.clColor);
         }).toList(),
         
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(

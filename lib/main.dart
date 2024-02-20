@@ -1,7 +1,7 @@
 import 'package:appmail/widget/categories_screen.dart';
 import 'package:flutter/material.dart';
 import './widget/appbar/appbar.dart';
-
+import './widget/categories_meals_screen.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -15,11 +15,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        primarySwatch: Colors.blue,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         appBarTheme: AppBarTheme(backgroundColor: Colors.amber),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      routes: {'/CategoryMealScreen':(context) => const CategoryMealScreen()
+               
+               }
     );
   }
 }
