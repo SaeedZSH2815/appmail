@@ -15,7 +15,7 @@ class CategoryItem extends StatelessWidget {
   // }
 
   void SelectCategoryItem(BuildContext clContext) {
-    Navigator.pushNamed(clContext, '/CategoryMealScreen',
+    Navigator.pushNamed(clContext, CategoryMealScreen.routeName,
         arguments: {'id': clId, 'Title': clTitle});
   }
 

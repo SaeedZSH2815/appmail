@@ -3,13 +3,16 @@ import 'package:flutter/material.dart';
 import '../app_const.dart';
 
 class CategoryMealScreen extends StatelessWidget {
+  static const routeName = '/CategoryMealScreen';
   const CategoryMealScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     final arguments = ModalRoute.of(context)!.settings.arguments;
+
     final arguments1 =
         ModalRoute.of(context)?.settings.arguments as Map<String, String>;
+
     if (arguments1.containsKey("id")) print("vfdfd");
 
     return Scaffold(
