@@ -1,8 +1,10 @@
+import 'package:appmail/screens/tab_screen.dart';
 import 'package:appmail/widget/categories_screen.dart';
 import 'package:flutter/material.dart';
 import './widget/appbar/appbar.dart';
-import './widget/categories_meals_screen.dart';
+import 'screens/categories_meals_screen.dart';
 import 'app_const.dart';
+import './screens/tab_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,20 +17,27 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          appBarTheme: AppBarTheme(backgroundColor: Colors.amber),
-          useMaterial3: true,
-        ),
-        //home: const MyHomePage(title: 'Flutter Demo Home Page'),
-        initialRoute: '/',
-        routes: {
-          AppConstants.cDefaultRouteName: (context) =>
-              const MyHomePage(title: 'Flutter Demo Home Page'),
-          CategoryMealScreen.routeName: (context) => const CategoryMealScreen()
-        });
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        appBarTheme: AppBarTheme(backgroundColor: Colors.amber),
+        useMaterial3: true,
+      ),
+      //home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      initialRoute: '/',
+      routes: {
+        AppConstants.cDefaultRouteName: (context) =>
+            // const MyHomePage(title: 'Flutter Demo Home Page'),
+
+            // (context) =>
+            TabScreen(),
+        CategoryMealScreen.routeName: (context) => const CategoryMealScreen()
+      },
+      onGenerateRoute: (settings) {
+        print("Route :" + settings.toString());
+      },
+    );
   }
 }
 
