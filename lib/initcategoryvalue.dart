@@ -16,10 +16,11 @@ const CategoryList = [
 
 const CategoryMeals = [
   Meal(
-      id: "id",
-      categories: ['c1', 'c2'],
-      title: "title",
-      imageurl: "imageurl",
+      id: "1",
+      categories: ['c1', 'c2', 'c3'],
+      title: "Cloves Of Garlic",
+      imageurl:
+          "https://www.fileavaran.ir/storage/images/m-270166739900163627d5997019.jpeg",
       ingredients: ["4 Chicken Breasts", "1 Onion", "2 Cloves Of Garlic"],
       steps: ["Ass cocnut milk", "serve with rice"],
       duration: 20,
@@ -28,5 +29,20 @@ const CategoryMeals = [
       isGlutenFree: true,
       isLactoseFree: true,
       isVegan: true,
-      isVegetarian: true)
+      isVegetarian: true),
+  Meal(
+      id: "2",
+      categories: ['c1', 'c2', 'c3'],
+      title: "Chicken Breasts dfd sdfdsf sdfdsf sdfdsf ",
+      imageurl:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXW6d1hXU4yO6ZQJ6Gv84O5en8VyThgNWOHm94R7aZNA&s",
+      ingredients: ["4 Chicken Breasts", "1 Onion", "2 Cloves Of Garlic"],
+      steps: ["Ass cocnut milk", "serve with rice"],
+      duration: 20,
+      complexy: Complexity.challenging,
+      affordability: Affordability.pricey,
+      isGlutenFree: true,
+      isLactoseFree: true,
+      isVegan: true,
+      isVegetarian: true),
 ];

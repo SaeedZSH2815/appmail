@@ -2,6 +2,7 @@ import 'package:appmail/widget/categories_screen.dart';
 import 'package:flutter/material.dart';
 import './widget/appbar/appbar.dart';
 import './widget/categories_meals_screen.dart';
+import 'app_const.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,11 +22,12 @@ class MyApp extends StatelessWidget {
           appBarTheme: AppBarTheme(backgroundColor: Colors.amber),
           useMaterial3: true,
         ),
-        home: const MyHomePage(title: 'Flutter Demo Home Page'),
+        //home: const MyHomePage(title: 'Flutter Demo Home Page'),
         initialRoute: '/',
         routes: {
-          '/': (context) => const MyHomePage(title: 'Flutter Demo Home Page'),
-          CategoryMealScreen.routeName : (context) => const CategoryMealScreen()
+          AppConstants.cDefaultRouteName: (context) =>
+              const MyHomePage(title: 'Flutter Demo Home Page'),
+          CategoryMealScreen.routeName: (context) => const CategoryMealScreen()
         });
   }
 }
@@ -39,14 +41,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
   final String _titleAppBar = 'Mail...';
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {

@@ -21,6 +21,7 @@ class CategoryItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+//    return Text("data");
     return InkWell(
       onTap: () => SelectCategoryItem(context),
       child: Container(

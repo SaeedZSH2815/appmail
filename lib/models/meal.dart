@@ -1,12 +1,10 @@
-import 'package:flutter/material.dart',
-import 'package:flutter/foundation.dart'
+import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 
 enum Complexity { simple, challenging, hard }
 
-enum Affordability{
+enum Affordability { affordable, pricey, luxurios }
 
-  affordable,pricey,luxurios
-}
 class Meal {
   final String id;
   final List<String> categories;
@@ -23,21 +21,17 @@ class Meal {
   final bool isVegetarian;
 
   const Meal(
-    {
-  
-  required this.id,
-  required this.categories,
-  required this.title,
-  required this.imageurl,
-  required this.ingredients,
-  required this.steps,
-  required this.duration,
-  required this.complexy,
-  required this.affordability,
-  required this.isGlutenFree,
-  required this.isLactoseFree,
-  required this.isVegan,
-  required this.isVegetarian
-
-    } );
+      {required this.id,
+      required this.categories,
+      required this.title,
+      required this.imageurl,
+      required this.ingredients,
+      required this.steps,
+      required this.duration,
+      required this.complexy,
+      required this.affordability,
+      required this.isGlutenFree,
+      required this.isLactoseFree,
+      required this.isVegan,
+      required this.isVegetarian});
 }
