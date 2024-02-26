@@ -1,3 +1,4 @@
+import 'package:appmail/screens/filter_screen.dart';
 import 'package:appmail/screens/tab_screen.dart';
 import 'package:appmail/widget/categories_screen.dart';
 import 'package:flutter/material.dart';
@@ -5,6 +6,7 @@ import './widget/appbar/appbar.dart';
 import 'screens/categories_meals_screen.dart';
 import 'app_const.dart';
 import './screens/tab_screen.dart';
+import './screens/bottom_tab_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,11 +29,12 @@ class MyApp extends StatelessWidget {
       //home: const MyHomePage(title: 'Flutter Demo Home Page'),
       initialRoute: '/',
       routes: {
+        AppConstants.cFilterMealRouteName: (context) => FilterSreen(),
         AppConstants.cDefaultRouteName: (context) =>
             // const MyHomePage(title: 'Flutter Demo Home Page'),
 
             // (context) =>
-            TabScreen(),
+            BottomTabScreen(),
         CategoryMealScreen.routeName: (context) => const CategoryMealScreen()
       },
       onGenerateRoute: (settings) {
